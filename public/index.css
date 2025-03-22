@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #0b3d0b;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #d4f4d4;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.fa-magnifying-glass {
+  color: #d4f4d4;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s;
+}
+
+.flex-center:hover {
+  transform: scale(1.05);
+}
+
+.header-center {
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10%;
+  animation: slideIn 1s ease-in-out;
+}
+
+.left-margin {
+  margin: 0px 16px;
+}
+
+#uv-frame {
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0b3d0b;
+}
+
+#uv-error {
+  color: #ff6666 !important;
+  white-space: pre-wrap;
+}
+
+#uv-error-code {
+  font-size: 12px;
+  color: #d4f4d4;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#uv-register-sw {
+  color: #d4f4d4;
+  background: #1b5e20;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding: 16px 20px;
+  line-height: 16px;
+  display: none;
+  transition: background-color 0.3s;
+}
+
+#uv-register-sw:active {
+  background: #145a14;
+}
+
+#uv-register-sw.show {
+  display: block;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.logo-wrapper .text {
+  font-size: 75px;
+  color: #d4f4d4;
+}
+
+.logo-wrapper h1 {
+  color: #d4f4d4;
+  animation: slideIn 1s ease-in-out;
+}
+
+footer {
+  margin: 0 5vw;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+  margin-bottom: 20px;
+  transition: color 0.5s;
+}
+
+footer > div {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+footer a,
+footer span {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #d4f4d4;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+footer a {
+  cursor: pointer;
+}
+
+footer a:hover {
+  color: #a4e6a4;
+}
+
+.desc p {
+  width: 560px;
+  color: rgba(212, 244, 212, 0.7);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+#uv-address {
+  background: none;
+  font-family: inherit;
+  padding: 0px 17px;
+  height: 48px;
+  border: 1px solid rgba(212, 244, 212, 0.2);
+  color: #d4f4d4;
+  border-radius: 50px;
+  outline: none;
+  width: 350px;
+  margin-top: 5px;
+  transition: border-radius 0.1s, border-color 0.3s, box-shadow 0.3s;
+}
+
+#uv-address:focus {
+  border: 1px solid rgba(212, 244, 212, 0.7);
+  border-radius: 6px;
+  box-shadow: 0 0 10px #34c759;
+}
+
+.credit {
+  border-radius: 10px;
+  padding: 10px;
+  display: block;
+  border: #d4f4d4 1px solid;
+  color: #d4f4d4;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.credit label {
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+.credit a,
+.credit label {
+  color: #d4f4d4;
+  text-decoration: underline;
+  text-align: right;
+  transition: color 0.3s;
+}
+
+.credit a:hover,
+.credit label:hover {
+  color: #a4e6a4;
+}
+
+.credit pre {
+  display: none;
+  width: 100%;
+}
+
+.credit label::after {
+  content: "show license";
+  cursor: pointer;
+}
+
+.credit input:checked + label::after {
+  content: "hide license";
+}
+
+.credit input:checked ~ pre {
+  display: block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
